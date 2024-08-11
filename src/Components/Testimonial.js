@@ -8,7 +8,6 @@ const Testimonial = () => {
       <hr className="divider" />
       <div className="work-section-top">
         <p className="primary-subheading">Testimonial</p>
-        <h1 className="primary-heading">What They Are Saying</h1>
         <p className="primary-text">
           Lorem ipsum dolor sit amet consectrfd. Non tincidunt magna non et
           elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.

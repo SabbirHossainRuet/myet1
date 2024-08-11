@@ -27,10 +27,18 @@ body {
 }
 
 nav {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-between;
-  min-height: 90px;
+  justify-content: space-between;*/
+  min-height: 58px;
+  display: flex;
+  position: fixed;
+  width: 86%;
+  align-items: center;
+  z-index: 1000; /* Ensure it's on top of other content */
+  justify-content: space-around;
+  background-color:#f3f6f7e2;
+  background-size: 50px;
 }
 
 .navbar-menu-container {
@@ -43,6 +51,11 @@ nav {
   color: rgb(159, 32, 18);
   font-size: 1.1rem;
   font-weight: 600;
+  transition: color 0.3s;
+}
+.navbar-links-container a:hover {
+  color: rgb(0, 102, 255); /* Color change on hover */
+  cursor: pointer; /* Show pointer cursor on hover */
 }
 
 .primary-button {
@@ -222,7 +235,7 @@ nav {
 }
 
 .primary-heading {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1rem, 3vw, 2rem);
   color: #4c4c4c;
   /* line-height: 5rem; */
   max-width: 100%;
