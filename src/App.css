@@ -315,11 +315,20 @@ nav {
   /* Sends the image to the background, behind other elements */
 }
 
+/* styles.css or your component's CSS file */
+#message {
+  width: 100%; /* Makes the input box take up 100% of its container's width */
+  height: 100px; /* Adjust the height as needed */
+  padding: 10px; /* Add padding inside the input box */
+  font-size: 16px; /* Increase font size for better readability */
+  box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+}
+
 
 .primary-subheading {
-  font-weight: 800;
-  color: #249831;
-  font-size: 3.15rem;
+  font-weight: 500;
+  color: #13573b;
+  font-size: 2.15rem;
   text-align: center;
 }
 

@@ -13,7 +13,7 @@ const About = () => {
 
         <div className="about-section-text-container">
           <p className="primary-subheading">About</p>
-          <h1 className="primary-heading">Welcome to MyET1</h1>
+          <h1 className="primary-heading">Welcome to MyET1.com</h1>
           <p className="primary-text">
             We're on a mission to help workers take cost effective control of
             their employment disputes, especially where lawyers and law firms
