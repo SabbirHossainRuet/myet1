@@ -27,7 +27,7 @@ const About = () => {
           </p>
           <p className="primary-text">
             To get started now, download one of our three helpful ET1 guides.
-            For one to one advice and support, click on one of tailored services
+            For one to one advice and support, click on one of our tailored services
             packages. Use the Contact form to get in touch if you have any
             questions.
           </p>

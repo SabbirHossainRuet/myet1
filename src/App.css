@@ -97,9 +97,13 @@ nav {
   margin-bottom: 10px;
 }
 
+.card h4 {
+  text-align: center;
+}
+
 .card p {
   margin: 10px 0;
-  font-weight: bold;
+  text-align: justify;
 }
 
 .card button {
@@ -236,7 +240,7 @@ nav {
 
 .primary-heading {
   font-size: clamp(1rem, 3vw, 2rem);
-  color: #4c4c4c;
+  color: orange;
   /* line-height: 5rem; */
   max-width: 100%;
   text-align: center;

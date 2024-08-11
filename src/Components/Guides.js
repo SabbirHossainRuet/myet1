@@ -12,19 +12,19 @@ const Guides = () => {
                 </div>
                 <div className="card">
                     <h3>Guide 2</h3>
-                    <p>£14.99</p>
+                    <h4>£14.99</h4>
                     <button>Download</button>
                     <p>Example Text</p>
                 </div>
                 <div className="card">
                     <h3>Guide 3</h3>
-                    <p>£19.99</p>
+                    <h4>£19.99</h4>
                     <button>Download</button>
                     <p>Example Text</p>
                 </div>
                 <div className="card">
                     <h3>Questions and Answers</h3>
-                    <p>£29.99</p>
+                    <h4>£29.99</h4>
                     <button>Download</button>
                     <p>Example Text</p>
                 </div>
@@ -32,7 +32,7 @@ const Guides = () => {
             <br />
             <div className="bundle-card">
                 <h3>Buy Bundle 2-4</h3>
-                <p>£49.99</p>
+                <h4>£49.99</h4>
                 <p>(Saving £15.00)</p>
                 <button>Download</button>
                 <p>Example Text</p>

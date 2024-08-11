@@ -4,7 +4,7 @@ const Contact = () => {
   return (
 
     <div className="contact-form-container">
-      <p className="primary-heading">Contact us!</p>
+      <p className="primary-heading">Contact us</p>
       <form className="contact-form">
         <div className="form-group">
           <label htmlFor="name">Name:</label>
