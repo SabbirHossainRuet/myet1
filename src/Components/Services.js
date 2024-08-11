@@ -35,7 +35,7 @@ const Services = () => {
         <div className="card">
           <h3>Option 4</h3>
           <h4>£899</h4>
-          <p><b>Commission a Specialist Employment Lawyer through us.</b>
+          <p><b>Commission an Employment Lawyer through us.</b>
           <br />
           As we instruct on multiple ET1s every week, we get the best rates for you.</p>
         </div>
