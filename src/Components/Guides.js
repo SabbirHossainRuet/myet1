@@ -19,6 +19,7 @@ const Guides = () => {
                 <div className="card">
                     <h3>Guide 3</h3>
                     <h4>£19.99</h4>
+                    <br />
                     <button>Download</button>
                     <p>Example Text</p>
                 </div>
