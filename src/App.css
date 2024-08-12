@@ -79,9 +79,10 @@ nav {
 
 .card {
   border: 1px solid #ddd;
+  background-color: hwb(0 98% 2%);
   border-radius: 8px;
   padding: 20px;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
   width: 22%;
   /* Adjust width to fit four cards side by side */
   box-shadow: 0 2px 5px rgba(15, 170, 141, 0.859);
@@ -90,23 +91,42 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 20px;
+  min-height: 200px;
   /* Ensures content is evenly spaced */
 }
 
 .card h3 {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
 }
 
 .card h4 {
   text-align: center;
+  display:flex;
+  font-size: 25px;
+  flex-direction: column;
 }
 
 .card p {
   margin: 10px 0;
   text-align: center;
+  align-items: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.card p.g{
+  text-align: center;
+  align-items: center;
+  height: 30px;
 }
 .card p b {
   color: orange;
+  font-size: 20px;
 }
 
 .card button {
@@ -171,27 +191,42 @@ nav {
 
 /* Other styles... */
 
-
-
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .card {
-    width: 30%;
-    /* Adjust width for medium screens */
+    width: 22%;
+    /* Four cards in a row */
   }
 }
 
-@media (max-width: 768px) {
+/* Medium screens (tablets, 768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
   .card {
-    width: 45%;
-    /* Adjust width for tablets */
+    width: 32%;
+    /* Three cards in a row */
   }
 }
+
+/* Small screens (landscape phones, 600px to 767px) */
+@media (min-width: 600px) and (max-width: 767px) {
+  .card {
+    width: 48%;
+    /* Two cards in a row */
+  }
+}
+
+/* Extra small screens (portrait phones, less than 600px) */
+@media (max-width: 599px) {
+  .card {
+    width: 70%;
+    height: 10%;
+    margin: 10px auto;
+    /* One card per row */
+  }
+}
+
+
 
 @media (max-width: 480px) {
-  .card {
-    width: 100%;
-    /* Full width for mobile devices */
-  }
 
   .bundle-card {
     width: 100%;

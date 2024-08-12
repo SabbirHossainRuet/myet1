@@ -8,26 +8,26 @@ const Guides = () => {
                 <div className="card">
                     <h3>Free Guide</h3>
                     <button>Download</button>
-                    <p>Example Text</p>
+                    <p className="g">Example Text</p>
                 </div>
                 <div className="card">
                     <h3>Guide 2</h3>
                     <h4>£14.99</h4>
                     <button>Download</button>
-                    <p>Example Text</p>
+                    <p className="g">Example Text</p>
                 </div>
                 <div className="card">
                     <h3>Guide 3</h3>
                     <h4>£19.99</h4>
                     <br />
                     <button>Download</button>
-                    <p>Example Text</p>
+                    <p className="g">Example Text</p>
                 </div>
                 <div className="card">
                     <h3>Questions and Answers</h3>
                     <h4>£29.99</h4>
                     <button>Download</button>
-                    <p>Example Text</p>
+                    <p className="g">Example Text</p>
                 </div>
             </div>
             <br />

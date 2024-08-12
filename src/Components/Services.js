@@ -20,7 +20,6 @@ const Services = () => {
           <h4>£299</h4>
           <p>
             <b>We offer 3 x 1 hour Coaching Support Service.</b>
-            <br />
             Helping you write your own ET1 with our expert Coaching Advice and
             Support Service by your side.
           </p>
@@ -36,7 +35,6 @@ const Services = () => {
           <h3>Option 4</h3>
           <h4>£899</h4>
           <p><b>Commission an Employment Lawyer through us.</b>
-          <br />
           As we instruct on multiple ET1s every week, we get the best rates for you.</p>
         </div>
       </div>
