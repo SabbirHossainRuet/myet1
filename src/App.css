@@ -217,8 +217,7 @@ nav {
 /* Extra small screens (portrait phones, less than 600px) */
 @media (max-width: 599px) {
   .card {
-    width: 70%;
-    height: 10%;
+    width: 100%;
     margin: 10px auto;
     /* One card per row */
   }
@@ -346,15 +345,21 @@ nav {
 .fullscreen-image {
   position: relative;
   /* Positions the image relative to the viewport */
-  width: 100%;
+  max-width: 100%;
   /* Makes the image span the full width of the viewport */
-  height: 450px;
+  height: auto;
   /* Makes the image span the full height of the viewport */
   display: block;
   margin: 0 auto;
 
   /* Ensures the image covers the entire area without distortion */
   /* Sends the image to the background, behind other elements */
+}
+
+@media (max-width: 599px) {
+  .fullscreen-image {
+    max-width: 90%; /* Full-width for mobile devices */
+  }
 }
 
 /* styles.css or your component's CSS file */
