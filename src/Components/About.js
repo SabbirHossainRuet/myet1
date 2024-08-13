@@ -7,9 +7,13 @@ const About = () => {
     <div>
       <Navbar />
       <br />
-      <div className="about-section-container">
+      <br />
+      <br />
+      <div className="image-container">
         <img src={legal} alt="" className="fullscreen-image" />
-        <hr className="divider" />
+      </div>
+      <div className="about-section-container">
+
 
         <div className="about-section-text-container">
           <p className="primary-subheading">About</p>
@@ -21,7 +25,7 @@ const About = () => {
             workers.
             <br />
             <br />
-            
+
             We're here to provide support and practical employment
             advice for everyone, no matter what their financial circumstances.
           </p>
@@ -33,8 +37,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <br />
-      <hr className="divider" />
+
     </div>
   );
 };

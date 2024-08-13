@@ -49,11 +49,11 @@ const Navbar = () => {
         <a href="">Services</a>
         <a href="">Contact Us</a>
         <a href="">Testimonials</a> */}
-        <Link to="about" smooth={true} duration={500}>About</Link>
-        <Link to="guides" smooth={true} duration={500}>ET1 Guides</Link>
-        <Link to="services" smooth={true} duration={500}>Services</Link>
-        <Link to="contact" smooth={true} duration={500}>Contact Us</Link>
-        <Link to="testimonial" smooth={true} duration={500}>Testimonial</Link>
+        <Link to="about" smooth={true} duration={500} offset={-60}>About</Link>
+        <Link to="guides" smooth={true} duration={500} offset={-60}>ET1 Guides</Link>
+        <Link to="services" smooth={true} duration={500} offset={-60}>Services</Link>
+        <Link to="contact" smooth={true} duration={500} offset={-60}>Contact Us</Link>
+        <Link to="testimonial" smooth={true} duration={500}offset={-60}>Testimonial</Link>
 
       </div>
       <div className="navbar-menu-container">

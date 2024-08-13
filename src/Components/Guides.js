@@ -48,87 +48,98 @@
 
 // src/Guides.js
 
-import React, { useState } from "react";
-import CheckoutForm from "./CheckoutForm";
+import React, { useState } from 'react';
+import CheckoutForm from './CheckoutForm';
+import Modal from './Modal';
 
 const Guides = () => {
-  const [selectedGuide, setSelectedGuide] = useState(null);
-  const [clientSecret, setClientSecret] = useState("");
+    const [selectedGuide, setSelectedGuide] = useState(null);
+    const [clientSecret, setClientSecret] = useState("");
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const guides = [
-    { id: 1, name: "Free Guide", price: 0, text: "Example Text" },
-    { id: 2, name: "Guide 2", price: 1499, text: "Example Text" },
-    { id: 3, name: "Guide 3", price: 1999, text: "Example Text" },
-    { id: 4, name: "Questions and Answers", price: 2999, text: "Example Text" },
-  ];
+    const guides = [
+        { id: 1, name: "Free Guide", price: 0, text: "Example Text" },
+        { id: 2, name: "Guide 2", price: 1499, text: "Example Text" },
+        { id: 3, name: "Guide 3", price: 1999, text: "Example Text" },
+        { id: 4, name: "Questions and Answers", price: 2999, text: "Example Text" },
+    ];
 
-  const bundleguides = [
-    {
-      id: 1,
-      name: "Buy Bundle 2-4",
-      price: 4999,
-      text1: "(Saving £15.00)",
-      text2: "Example Text",
-    },
-  ];
+    const bundleguides = [
+        {
+            id: 1,
+            name: "Buy Bundle 2-4",
+            price: 4999,
+            text1: "(Saving £15.00)",
+            text2: "Example Text",
+        },
+    ];
 
-  const handlePurchase = async (guide, event) => {
-    event.preventDefault();
-    setSelectedGuide(guide);
+    const handlePurchase = async (guide) => {
+        setSelectedGuide(guide);
+        setIsModalOpen(true);
 
-    // Call your backend to create a payment intent
-    const response = await fetch(
-      "http://localhost:3001/create-payment-intent",
-      {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: guide.price }),
-      }
+        // Call your backend to create a payment intent
+        const response = await fetch("http://localhost:3001/create-payment-intent", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ amount: guide.price }),
+        });
+
+        const { clientSecret } = await response.json();
+        setClientSecret(clientSecret);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setClientSecret(""); // Clear clientSecret when closing
+    };
+
+    return (
+        <div>
+            <p className="primary-subheading">ET1 Guides</p>
+            <div className="card-container">
+                {guides.map((guide) => (
+                    <div className="card" key={guide.id}>
+                        <h3>{guide.name}</h3>
+                        {guide.price > 0 && <h4>£{(guide.price / 100).toFixed(2)}</h4>}
+                        <button onClick={() => handlePurchase(guide)}>
+                            {guide.price > 0 ? "Buy" : "Download"}
+                        </button>
+                        <p className="g">{guide.text}</p>
+                    </div>
+                ))}
+            </div>
+            <div className="bundle-card">
+                {bundleguides.map((guide) => (
+                    <div key={guide.id}>
+                        <h3>{guide.name}</h3>
+                        {guide.price > 0 && <h4>£{(guide.price / 100).toFixed(2)}</h4>}
+                        <p className="g">{guide.text1}</p>
+                        <button onClick={() => handlePurchase(guide)}>
+                            {guide.price > 0 ? "Buy" : "Download"}
+                        </button>
+                        <p className="g">{guide.text2}</p>
+                    </div>
+                ))}
+            </div>
+            <br />
+           
+            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                {selectedGuide && clientSecret && (
+                    <CheckoutForm
+                        clientSecret={clientSecret}
+                        amount={selectedGuide.price}
+                        onPaymentSuccess={() => {
+                            alert("Payment Successful!");
+                            handleCloseModal(); // Close modal on success
+                        }}
+                    />
+                )}
+            </Modal>
+            
+        </div>
     );
-
-    const { clientSecret } = await response.json();
-    setClientSecret(clientSecret);
-  };
-
-  return (
-    <div>
-      <p className="primary-subheading">ET1 Guides</p>
-      <div className="card-container">
-        {guides.map((guide) => (
-          <div className="card" key={guide.id}>
-            <h3>{guide.name}</h3>
-            {guide.price > 0 && <h4>£{(guide.price / 100).toFixed(2)}</h4>}
-
-            <button onClick={(event) => handlePurchase(guide, event)} onTouchEnd={(event) => handlePurchase(guide, event)}>
-              {guide.price > 0 ? "Buy" : "Download"}
-            </button>
-            <p className="g">{guide.text}</p>
-          </div>
-        ))}
-      </div>
-      <div className="bundle-card">
-        {bundleguides.map((guide) => (
-          <div key={guide.id}>
-            <h3>{guide.name}</h3>
-            {guide.price > 0 && <h4>£{(guide.price / 100).toFixed(2)}</h4>}
-            <p className="g">{guide.text1}</p>
-            <button onClick={(event) => handlePurchase(guide, event)} onTouchEnd={(event) => handlePurchase(guide, event)}>
-              {guide.price > 0 ? "Buy" : "Download"}
-            </button>
-            <p className="g">{guide.text2}</p>
-          </div>
-        ))}
-      </div>
-      <hr className="divider" />
-      {selectedGuide && clientSecret && (
-        <CheckoutForm
-          clientSecret={clientSecret}
-          amount={selectedGuide.price}
-          onPaymentSuccess={() => alert("Payment Successful!")}
-        />
-      )}
-    </div>
-  );
 };
 
 export default Guides;
+

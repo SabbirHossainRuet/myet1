@@ -10,12 +10,26 @@ img {
   height: auto;
 }
 
-.App {
-  min-height: 100vh;
+.App #services,
+.App #guides,
+.App #contact,
+.App #footer,
+.App #testimonial {
+  min-height: 75vh;
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
 }
+
+.App .about-section-container {
+  min-height: 75vh;
+  width: 85vw;
+  max-width: 1900px;
+  margin: 0rem auto;
+  bottom: 0;
+}
+
+
 
 body {
   max-width: 100%;
@@ -30,16 +44,59 @@ nav {
   /* display: flex;
   align-items: center;
   justify-content: space-between;*/
-  min-height: 58px;
+  min-height: 72px;
   display: flex;
   position: fixed;
-  width: 86%;
+  width: 100%;
   align-items: center;
-  z-index: 1000; /* Ensure it's on top of other content */
+  z-index: 1000;
+  /* Ensure it's on top of other content */
   justify-content: space-around;
-  background-color:#f3f6f7e2;
+  background-color: #f3f6f7e2;
   background-size: 50px;
+  box-sizing: border-box;
 }
+
+.news-container {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.news-container .left {
+  display: inline-block;
+  width: 50%;
+  box-sizing: border-box;
+  padding-right: 10px;
+}
+
+
+.news-container .right {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.alt {
+  color:orange;
+  font-size: 30px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+
+  /* Adjust the max-width value as needed */
+  nav {
+    width: 100%;
+    /* Full width for small devices */
+    justify-content: space-around;
+    /* Adjust content alignment if needed */
+  }
+}
+
 
 .navbar-menu-container {
   display: none;
@@ -53,9 +110,12 @@ nav {
   font-weight: 600;
   transition: color 0.3s;
 }
+
 .navbar-links-container a:hover {
-  color: rgb(0, 102, 255); /* Color change on hover */
-  cursor: pointer; /* Show pointer cursor on hover */
+  color: rgb(0, 102, 255);
+  /* Color change on hover */
+  cursor: pointer;
+  /* Show pointer cursor on hover */
 }
 
 .primary-button {
@@ -104,7 +164,7 @@ nav {
 
 .card h4 {
   text-align: center;
-  display:flex;
+  display: flex;
   font-size: 25px;
   flex-direction: column;
 }
@@ -116,14 +176,15 @@ nav {
   height: 200px;
   display: flex;
   flex-direction: column;
-  
+
 }
 
-.card p.g{
+.card p.g {
   text-align: center;
   align-items: center;
   height: 30px;
 }
+
 .card p b {
   color: orange;
   font-size: 20px;
@@ -288,7 +349,7 @@ nav {
   max-width: 100%;
   color: #6a6a6a;
   margin: 1.5rem 0rem;
-  text-align: justify;
+  text-align: center;
 }
 
 .secondary-button {
@@ -342,33 +403,51 @@ nav {
   align-items: center;
 }
 
-.fullscreen-image {
-  position: relative;
-  /* Positions the image relative to the viewport */
-  max-width: 100%;
-  /* Makes the image span the full width of the viewport */
-  height: auto;
-  /* Makes the image span the full height of the viewport */
-  display: block;
-  margin: 0 auto;
-
-  /* Ensures the image covers the entire area without distortion */
-  /* Sends the image to the background, behind other elements */
+.image-container {
+  width: 100%;
+  /* Container takes full width */
+  height: 75vh;
+  /* Set the height you want (e.g., 70% of the viewport height) */
+  overflow: hidden;
+  /* Hide any overflow if the image exceeds the container */
+  display: flex;
+  /* Center the image inside the container */
+  align-items: center;
+  /* Vertically center the image */
+  justify-content: center;
+  /* Horizontally center the image */
 }
+
+.fullscreen-image {
+  width: 100%;
+  /* Ensure the image takes the full width of the container */
+  height: auto;
+  /* Adjust height automatically to maintain aspect ratio */
+  object-fit: cover;
+  /* Cover the container without distortion */
+}
+
 
 @media (max-width: 599px) {
   .fullscreen-image {
-    max-width: 90%; /* Full-width for mobile devices */
+    margin-top: 0;
+    max-width: 90%;
+    /* Full-width for mobile devices */
   }
 }
 
 /* styles.css or your component's CSS file */
 #message {
-  width: 100%; /* Makes the input box take up 100% of its container's width */
-  height: 100px; /* Adjust the height as needed */
-  padding: 10px; /* Add padding inside the input box */
-  font-size: 16px; /* Increase font size for better readability */
-  box-sizing: border-box; /* Ensures padding and border are included in the width/height */
+  width: 100%;
+  /* Makes the input box take up 100% of its container's width */
+  height: 100px;
+  /* Adjust the height as needed */
+  padding: 10px;
+  /* Add padding inside the input box */
+  font-size: 16px;
+  /* Increase font size for better readability */
+  box-sizing: border-box;
+  /* Ensures padding and border are included in the width/height */
 }
 
 
@@ -500,9 +579,8 @@ button[type="submit"]:hover {
 }
 
 .footer-wrapper {
-  margin: 6rem 0rem;
-  display: flex;
-  margin-top: 10rem;
+  margin: 2rem 0rem;
+  margin-top: 2rem;
 }
 
 .footer-logo-container {
@@ -577,7 +655,7 @@ button[type="submit"]:hover {
 }
 
 .work-section-wrapper {
-  margin-top: 5rem;
+  margin-top: 1rem;
 }
 
 .work-section-top p {
@@ -647,7 +725,7 @@ button[type="submit"]:hover {
 
 @media (max-width: 800px) {
   .nav-logo-container {
-    max-width: 140px;
+    max-width: 200px;
     color: brown;
   }
 

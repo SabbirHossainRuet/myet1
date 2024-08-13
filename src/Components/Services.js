@@ -38,7 +38,7 @@ const Services = () => {
           As we instruct on multiple ET1s every week, we get the best rates for you.</p>
         </div>
       </div>
-      <hr className="divider" />
+     
     </div>
   );
 };

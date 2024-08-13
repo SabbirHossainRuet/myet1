@@ -4,9 +4,9 @@
     max-width: 400px; /* Adjust form size */
     margin: 0 auto;
     padding: 20px;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(60, 159, 101, 0.1);
 }
 
 .checkout-form-title {
@@ -19,7 +19,7 @@
 .checkout-form {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Reduced gap between elements */
+    gap: 10px; /* Reduced gap between elements */
 }
 
 .form-group {
