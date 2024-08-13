@@ -2,11 +2,11 @@ import React from "react";
 import ProfilePic from "../Assets/john-doe-image.png";
 import { AiFillStar } from "react-icons/ai";
 
-const Testimonial = () => {
+const Clients = () => {
   return (
     <div className="work-section-wrapper">
       <div className="work-section-top">
-        <p className="primary-subheading">Testimonial</p>
+        <p className="primary-subheading">What our clients say</p>
         <p className="primary-text">
           Lorem ipsum dolor sit amet consectrfd. Non tincidunt magna non et
           elit. Dolor turpis molestie dui magnis facilisis at fringilla quam.
@@ -31,4 +31,4 @@ const Testimonial = () => {
   );
 };
 
-export default Testimonial;
+export default Clients;

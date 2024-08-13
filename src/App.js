@@ -1,6 +1,6 @@
 import "./App.css";
-import About from "./Components/About";
-import Testimonial from "./Components/Testimonial";
+import Mission from "./Components/Mission";
+import Clients from "./Components/Clients";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Services from "./Components/Services";
@@ -18,7 +18,7 @@ function App() {
 
       <div className="App">
 
-        <section id="about"><About /></section>
+        <section id="mission"><Mission /></section>
         <hr className="divider" />
         <br />
         <section id="guides"><Guides /></section>
@@ -34,7 +34,7 @@ function App() {
         <section id="newsletter"><NewsLetter /></section>
         <hr className="divider" />
         <br />
-        <section id="testimonial"><Testimonial /></section>
+        <section id="clients"><Clients /></section>
         <hr className="divider" />
         <br />
         <section id="footer"><Footer /></section>

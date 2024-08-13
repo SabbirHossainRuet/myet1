@@ -2,7 +2,7 @@ import React from "react";
 import legal from "../Assets/legal.jpg";
 import Navbar from "./Navbar";
 
-const About = () => {
+const Mission = () => {
   return (
     <div>
       <Navbar />
@@ -12,7 +12,7 @@ const About = () => {
       <div className="about-section-container">
 
         <div className="about-section-text-container">
-          <p className="primary-subheading">About</p>
+          <p className="primary-subheading">Mission</p>
           <h1 className="primary-heading">Welcome to MyET1.com</h1>
           <p className="primary-text">
             We're on a mission to help workers take cost effective control of
@@ -38,4 +38,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Mission;

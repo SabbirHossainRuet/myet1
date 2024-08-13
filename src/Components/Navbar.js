@@ -18,7 +18,7 @@ const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const menuOptions = [
     {
-      text: "About",
+      text: "Mission",
       icon: <InfoIcon />,
     },
     {
@@ -34,7 +34,11 @@ const Navbar = () => {
       icon: <PhoneRoundedIcon />,
     },
     {
-      text: "Testimonial",
+      text: "NewsLetter",
+      icon: <PhoneRoundedIcon />,
+    },
+    {
+      text: "Clients",
       icon: <CommentRoundedIcon />,
     },
   ];
@@ -49,11 +53,12 @@ const Navbar = () => {
         <a href="">Services</a>
         <a href="">Contact Us</a>
         <a href="">Testimonials</a> */}
-        <Link to="about" smooth={true} duration={500} offset={-60}>About</Link>
+        <Link to="mission" smooth={true} duration={500} offset={-60}>Mission</Link>
         <Link to="guides" smooth={true} duration={500} offset={-60}>ET1 Guides</Link>
         <Link to="services" smooth={true} duration={500} offset={-60}>Services</Link>
         <Link to="contact" smooth={true} duration={500} offset={-60}>Contact Us</Link>
-        <Link to="testimonial" smooth={true} duration={500}offset={-60}>Testimonial</Link>
+        <Link to="newsletter" smooth={true} duration={500} offset={-180}>Newsletter</Link>
+        <Link to="clients" smooth={true} duration={500} offset={-60}>Clients</Link>
 
       </div>
       <div className="navbar-menu-container">

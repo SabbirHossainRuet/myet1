@@ -14,19 +14,34 @@ img {
 .App #guides,
 .App #contact,
 .App #footer,
-.App #testimonial {
-  min-height: 75vh;
+.App #newsletter,
+.App #clients {
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
 }
 
 .App .about-section-container {
-  min-height: 75vh;
   width: 85vw;
   max-width: 1900px;
   margin: 0rem auto;
   bottom: 0;
+}
+
+@media (max-width: 599px) {
+
+  /* Adjust the max-width value as needed */
+  .App #services,
+  .App #guides,
+  .App #Contact,
+  .App #footer,
+  .App #newsletter,
+  .App #clients,
+  .App .about-section-container {
+    width: 90vw;
+    margin: auto
+  }
+
 }
 
 
@@ -435,6 +450,7 @@ nav {
   align-items: center;
   /* Vertically center the image */
   justify-content: center;
+  margin-bottom: 50px;
   /* Horizontally center the image */
 }
 
