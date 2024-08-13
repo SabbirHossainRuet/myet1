@@ -6,14 +6,10 @@ const About = () => {
   return (
     <div>
       <Navbar />
-      <br />
-      <br />
-      <br />
       <div className="image-container">
         <img src={legal} alt="" className="fullscreen-image" />
       </div>
       <div className="about-section-container">
-
 
         <div className="about-section-text-container">
           <p className="primary-subheading">About</p>
