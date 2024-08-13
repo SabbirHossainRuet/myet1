@@ -76,8 +76,8 @@ nav {
 
 .news-container .right {
   display: inline-block;
-  vertical-align: middle;
   width: 50%;
+  vertical-align: top;
   box-sizing: border-box;
 }
 
@@ -86,6 +86,23 @@ nav {
   font-size: 30px;
   text-align: center;
 }
+
+@media (max-width: 599px) {
+
+  /* Adjust the max-width value as needed */
+  .alt {
+    font-size: 20px;
+  }
+
+  .left{
+    width: 100%;
+  }
+
+  .right{
+    width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
 
   /* Adjust the max-width value as needed */

@@ -13,7 +13,6 @@ const Footer = () => {
           <p style={{textAlign:"center"}}> Stay up to date with MyET1.com, and how we're supporting UK workers to resolve their employment place disputes.</p>
         </div>
         <div className="right">
-          <div className="contact-form-container">
             <form className="contact-form">
               <div className="form-group">
                 <label htmlFor="name">Enter your email address</label>
@@ -22,7 +21,6 @@ const Footer = () => {
               <button type="submit">Sign up</button>
             </form>
           </div>
-        </div>
       </div>
       <br />
       <hr className="divider" />
