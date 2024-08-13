@@ -1,0 +1,101 @@
+/* src/CheckoutForm.css */
+
+.checkout-form-container {
+    max-width: 400px; /* Adjust form size */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.checkout-form-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.25em; /* Adjust font size */
+}
+
+.checkout-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Reduced gap between elements */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Reduced gap between label and input */
+}
+
+.label {
+    font-size: 0.875em;
+    color: #333;
+}
+
+.card-field-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.card-element {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.card-logos {
+    display: flex;
+    gap: 10px; /* Space between logos */
+    margin-left: 10px; /* Space between card field and logos */
+}
+
+.card-logo {
+    height: 20px; /* Adjust logo size */
+    width: auto;
+    opacity: 0.5; /* Default logo opacity */
+    transition: opacity 0.3s; /* Smooth transition for logo change */
+}
+
+.card-logo.active {
+    opacity: 1; /* Logo opacity when active */
+}
+
+.form-input {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.submit-button {
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    font-size: 0.875em;
+}
