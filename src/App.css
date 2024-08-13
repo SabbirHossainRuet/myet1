@@ -166,7 +166,7 @@ nav {
 }
 
 .bundle-card button {
-  background-color: #c4146c;
+  background-color: orange;
   color: white;
   border: none;
   padding: 10px;
@@ -176,7 +176,7 @@ nav {
 }
 
 .bundle-card button:hover {
-  background-color: #d339af;
+  background-color: rgb(249, 191, 82);
 }
 
 /* Styling for the horizontal line */

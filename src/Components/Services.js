@@ -9,7 +9,7 @@ const Services = () => {
           <h3>Option 1</h3>
           <h4>£79.99</h4>
           <p>
-            <b>Tailored Advice and Support - One hour.</b>
+            <b>One Hour of Tailored Advice and Support.</b>
             <br />
             Don' t worry if we run over slightly, or if we need to explain or
             clarify things again, we won't charge you any more.
